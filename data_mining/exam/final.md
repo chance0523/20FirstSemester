@@ -12,15 +12,23 @@
     - 비연속성 범주형 데이터에 사용. (bool 데이터 같은)
 
 - 연관성분석
+
   - 지지도, support
     - P(X)
-  - 신뢰도, confidenct
+  - 신뢰도, confidence
     - X를 산 사람이 Y도 살 확률
     - P(Y|X)
   - 향상도, lift
-    - P(XandY) / P(X)\*P(Y)
+    - P(X교Y) / P(X)\*P(Y)
     - A,B의 시청이 랜덤한 경우에 비해 A와의 관계가 고려되어 시청되는 비율 (1에서 멀수록 더 상관이 있음)
     - 1이면 독립. 서로 상관이 없다.
+  - conviction
+    - supp(A)supp(B^c)/supp(A,B^c)
+    - P(A)(1-P(B))/(P(A)-P(A교B))
+    - A와 B가 서로 독립이라면 1의 값을 가짐
+  - leverage
+    - P(A&B)-P(A)P(B)
+
 - 의사결정나무
 
 - KNN
@@ -39,10 +47,8 @@
     - Frequency : 구매빈도
     - Monetary : 구매금액
   - K-means
-
     - 각 군집에 속하는 데이터와의 거리를 최소화하는 중심점
     - 중심점을 평균, 거리 계산, 나눠야 할 군집의 수가 k
-
   - DBSCAN
   - 단위 맞추는게 중요
 
